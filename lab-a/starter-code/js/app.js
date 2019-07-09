@@ -115,20 +115,22 @@ function sumArray(sumArr) { //eslint-disable-line
   var array1 = [];
   for (var i = 0; i < sumArr.length; i++) {
     var temp = sumArr[i];
-    sum3 = temp + sum3;
-    console.log(sum3);
+    sum3 = sum(temp, sum3);
+    // console.log(sum3);
+    sum3 = parseInt(sum3);
+    // console.log(sum3);
   }
 
   var msg3 = '2,3,4 was passed in as an array of numbers, and 9 is their sum';
   array1.push(sum3);
   array1.push(msg3);
-  console.log(array1);
-
+  // console.log(array1);
+  return array1;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-sumArray(testArray);
+// sumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -144,11 +146,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var multi3 = 1;
+  var array2 = [];
+  for (var i = 0; i < multArr.length; i++) {
+    var temp2 = multArr[i];
+    multi3 = multiply(temp2, multi3);
+    console.log(parseInt(multi3));
+    multi3 = parseInt(multi3);
+  }
 
+  var msg4 = 'The numbers 2,3,4 have a product of 24';
+  array2.push(multi3);
+  array2.push(msg4);
+  console.log(array2);
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+multiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -169,7 +183,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1, 2, 3, 4 , 5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
